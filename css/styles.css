@@ -10,42 +10,42 @@ body {
 }
 
 .custtom-margin {
-  margin-top: 35px;
+  margin-top: 2.1875rem;
 }
 
 .page-wrapper {
   display: flex;
-  justify-content: center; /* horizontal */
-  align-items: center; /* vertical */
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   padding: 2rem;
 }
 
 .rating-card {
-  width: 450px;
+  width: 28.125rem;
   background-color: #202630;
   background-image: linear-gradient(to bottom, #222933, #191f26);
-  padding: 30px;
-  border-radius: 30px;
+  padding: 1.875rem;
+  border-radius: 1.875rem;
 }
 
 .rating-card .card-title {
   color: white;
-  font-size: 26px;
-  margin-top: 30px;
+  font-size: 1.625rem;
+  margin-top: 1.875rem;
 }
 
 .rating-card .card-text {
   color: #80848b;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .star-icon {
   display: flex;
   justify-content: center;
   background-color: #282e38;
-  width: 50px;
-  padding: 17px;
+  width: 3.125rem;
+  padding: 1.0625rem;
   border-radius: 50%;
 }
 
@@ -81,8 +81,8 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 55px;
-  height: 55px;
+  width: 3.4375rem;
+  height: 3.4375rem;
   flex-shrink: 0;
   border-radius: 50%;
   background-color: #252b36;
@@ -103,16 +103,16 @@ body {
 .submit-btn {
   width: 100%;
   background-color: #fd7612;
-  font-size: 18px;
-  padding-top: 15px;
-  padding-bottom: 12px;
-  border-radius: 25px;
+  font-size: 1.125rem;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.75rem;
+  border-radius: 1.5625rem;
   border: none;
   text-transform: uppercase;
   color: black;
   font-weight: 600;
   line-height: 1;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
   cursor: pointer;
   transition: background-color 0.2s ease-in;
 }
@@ -122,7 +122,12 @@ body {
   color: black;
 }
 
-/* active states stylings */
+@media (prefers-reduced-motion: reduce) {
+  .rating-btn,
+  .submit-btn {
+    transition: none;
+  }
+}
 
 .rating-btn.active {
   background-color: white;
@@ -130,40 +135,37 @@ body {
 }
 
 .rating-btn:has(input:focus-visible) {
-  outline: 2px solid white;
-  outline-offset: 3px;
+  outline: 0.125rem solid white;
+  outline-offset: 0.1875rem;
 }
-
-/* Thank you view layout */
 
 .thankyou-view {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 10px 0;
-  gap: 20px;
+  padding: 0.625rem 0;
+  gap: 1.25rem;
 }
 
 .thankyou-view .card-title {
-  font-size: 30px;
-  margin-top: 15px;
+  font-size: 1.875rem;
+  margin-top: 0.9375rem;
 }
 
 .thankyou-img {
-  width: 160px;
+  width: 10rem;
   height: auto;
 }
 
 .rating-result {
   background-color: #252b36;
   color: #fc7613;
-  padding: 10px 22px;
-  border-radius: 25px;
-  font-size: 15px;
-  margin: 0;
+  padding: 0.625rem 1.375rem;
+  border-radius: 1.5625rem;
+  font-size: 0.9375rem;
+  margin: 0 0 1.25rem;
   width: 60%;
-  margin-bottom: 20px;
 }
 
 .selected-rating {
@@ -171,122 +173,116 @@ body {
   font-weight: 700;
 }
 
-/* responsive styling */
-
-@media (max-width: 425px) {
+@media (max-width: 26.5625em) {
   .rating-card {
-    width: 350px;
-
-    padding: 20px;
-    border-radius: 20px;
+    width: 21.875rem;
+    padding: 1.25rem;
+    border-radius: 1.25rem;
   }
 
   .rating-card .card-title {
-    font-size: 22px;
-    margin-top: 28px;
+    font-size: 1.375rem;
+    margin-top: 1.75rem;
   }
 
   .rating-card .card-text {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   .rating-btn {
-    width: 45px;
-    height: 45px;
+    width: 2.8125rem;
+    height: 2.8125rem;
   }
 
   .submit-btn {
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
 
   .rating-card .card-body {
-    padding: 5px;
+    padding: 0.3125rem;
   }
 
   .rating-result {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
+    font-size: 0.8125rem;
+    padding: 0.5rem 1.125rem;
   }
 
   .thankyou-img {
-    width: 130px;
-  }
-
-  .rating-result {
-    font-size: 13px;
-    padding: 8px 18px;
+    width: 8.125rem;
   }
 
   .thankyou-view .card-title {
-    font-size: 25px;
-    margin-top: 15px;
+    font-size: 1.5625rem;
+    margin-top: 0.9375rem;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 23.4375em) {
   .rating-card {
-    width: 300px;
-    padding: 18px;
+    width: 18.75rem;
+    padding: 1.125rem;
   }
 
   .rating-card .card-title {
-    font-size: 20px;
-    margin-top: 25px;
+    font-size: 1.25rem;
+    margin-top: 1.5625rem;
   }
 
   .rating-card .card-text {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   .rating-btn {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .submit-btn {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
 
   .thankyou-img {
-    width: 110px;
+    width: 6.875rem;
   }
 
   .rating-result {
-    font-size: 11px;
-    padding: 7px 14px;
+    font-size: 0.6875rem;
+    padding: 0.4375rem 0.875rem;
   }
 
   .thankyou-view .card-title {
-    font-size: 22px;
-    margin-top: 12px;
+    font-size: 1.375rem;
+    margin-top: 0.75rem;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 20em) {
   .rating-card {
-    width: 280px;
-    padding: 15px;
+    width: 17.5rem;
+    padding: 0.9375rem;
   }
 
   .rating-card .card-title {
-    font-size: 18px;
-    margin-top: 22px;
+    font-size: 1.125rem;
+    margin-top: 1.375rem;
   }
 
   .rating-card .card-text {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
 
   .rating-btn {
-    width: 35px;
-    height: 35px;
+    width: 2.1875rem;
+    height: 2.1875rem;
   }
 
   .submit-btn {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
 
   .thankyou-view .card-title {
-    font-size: 20px;
-    margin-top: 8px;
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
   }
 }
