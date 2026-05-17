@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main class="page-wrapper">
+      <article class="card rating-card">
+        <!-- RATING VIEW — visible by default -->
+        <div class="rating-view">
+          <div class="card-body">
+            <!-- Icon is decorative — screen readers skip it -->
+            <div class="card-icon" aria-hidden="true">
+              <div class="star-icon">
+                <svg width="16" height="16">
+                  <use href="./images/icon-star.svg"></use>
+                </svg>
+              </div>
+            </div>
+
+            <h5 class="card-title mb-3">How did we do?</h5>
+
+            <p class="card-text">
+              Please let us know how we did with your support request. All
+              feedback is appreciated to help us improve our offering!
+            </p>
+          </div>
+
+          <fieldset class="rating-group mt-3">
+            <legend class="sr-only">Select a rating from 1 to 5</legend>
+
+            <label class="rating-btn">
+              <input type="radio" name="rating" value="1" />
+              <span aria-hidden="true">1</span>
+            </label>
+
+            <label class="rating-btn">
+              <input type="radio" name="rating" value="2" />
+              <span aria-hidden="true">2</span>
+            </label>
+
+            <label class="rating-btn">
+              <input type="radio" name="rating" value="3" />
+              <span aria-hidden="true">3</span>
+            </label>
+
+            <label class="rating-btn">
+              <input type="radio" name="rating" value="4" />
+              <span aria-hidden="true">4</span>
+            </label>
+            <label class="rating-btn">
+              <input type="radio" name="rating" value="5" />
+              <span aria-hidden="true">5</span>
+            </label>
+          </fieldset>
+
+          <button class="submit-btn custtom-margin" type="submit" disabled>
+            Submit
+          </button>
+        </div>
+
+        <!-- THANK YOU VIEW — hidden by default -->
+        <div class="thankyou-view" aria-live="polite" hidden>
+          <div class="card-body">
+            <img
+              src="./images/illustration-thank-you.svg"
+              alt="Thank you illustration"
+              class="thankyou-img"
+            />
+
+            <div class="d-flex justify-content-center">
+              <p class="rating-result mt-4 mt-md-5">
+                You selected <span class="selected-rating"></span> out of 5
+              </p>
+            </div>
+
+            <h5 class="card-title">Thank you!</h5>
+
+            <p class="card-text">
+              We appreciate you taking the time to give a rating. If you ever
+              need more support, don't hesitate to get in touch!
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <script src="./js/rating.js"></script>
+  </body>
+</html>
